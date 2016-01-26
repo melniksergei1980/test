@@ -1,0 +1,5 @@
+hello_world:
+  image: 'tutum.co/melniksergei1980/test:latest'
+  restart: always
+  ports:
+  - '80:80'

@@ -9,6 +9,6 @@ RUN git clone https://github.com/melniksergei1980/test.git
 WORKDIR /home/test 
 RUN npm install
 
-EXPOSE 80
+EXPOSE 8080
 
-CMD ["node", "home/test/hello.js"]
+CMD ["npm", "home/test/start"]
