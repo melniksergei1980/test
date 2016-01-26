@@ -1,8 +1,14 @@
-var http = require('http');
+var express = require('express');
 
-http.createServer(function (request, response) {
-    response.writeHead(200, {'Content-Type': 'text/plain'});
-    response.end('Hello World\n');
-}).listen(80);
+// Constants
+var DEFAULT_PORT = 80;
+var PORT = process.env.PORT || DEFAULT_PORT;
 
-console.log('Server started');
+// App
+var app = express();
+app.get('/', function (req, res) {
+  res.send('Hello World\n');
+});
+
+app.listen(PORT)
+console.log('Running on http://localhost:' + PORT);
