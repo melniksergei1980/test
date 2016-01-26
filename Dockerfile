@@ -4,10 +4,10 @@ RUN apt-get update
 RUN apt-get install -y git
 
 
-RUN cd home/
+WORKDIR  home/
 RUN git clone https://github.com/melniksergei1980/test.git
-RUN cd /home/test 
-RUN cd /web; npm install
+WORKDIR /home/test 
+RUN npm install
 
 EXPOSE 80
 
